@@ -1,0 +1,34 @@
+#container{
+    text-align: center;
+    font-family: monospace;
+    color: green;
+}
+#box{
+    display: grid;
+    width: 225px;
+    grid-template-columns: repeat(3,auto);
+    margin: auto;
+    color: black;
+}
+.cell{
+    width: 75px;
+    height: 75px;
+    color: brown;
+    border: 2px solid black;
+    box-shadow: 0 0 0 2px;
+    font-family: 'Permenant Marker', cursive;
+    text-align: center;
+    font-size: 50px;
+    
+}
+#btn{
+    background-color: rgb(143, 241, 241);
+    text-align: center;
+    font-family: monospace;
+    border-radius: 5px;
+    height: 30px;
+    width: 70px;
+}
+#statusText{
+    color: black;
+}

@@ -1,0 +1,23 @@
+.btn{
+    background-color: black;
+    color: white;
+    border: 3px solid wheat;
+    height: 30px;
+    width : 80px;
+    border-radius: 8px;
+    font-family: consolas,monospace;
+    cursor: pointer;
+}
+#time{
+    font-size: 50px;
+    color: rgb(84, 252, 120);
+    font-family: consolas,monospace;
+    margin: 0%;
+}
+#clock{
+    text-align: center;
+    background-color: black;
+    border-radius: 25px;
+    padding: 2%;
+    width: 400px;
+}
