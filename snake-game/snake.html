@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="snake.js"></script>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameBoard" height="500px" width="500px">
+            
+        </canvas>
+        <h2 id="score">0</h2>
+        <button id="btn" onclick="start()">Start</button><br>
+        <button id="speedBtn" onclick="control(-1)">-</button> 
+        <button id="speedBtn" onclick="control(1)">+</button>
+        
+    </div>
+</body>
+</html>
