@@ -1,13 +1,14 @@
-const paddle1Color="brown",paddle2Color="blue";
+const paddle1Color="Red",paddle2Color="Blue";
 const ballColor = "yellow";
 const paddle = {width:25,height:100};
 const paddleSpeed=50;
 const ballRadius =12.5;
 const paddle1UP = 87,paddle1DOWN=83;
 const paddle2UP = 38, paddle2DOWN = 40;
+const winScore= 3;
 
 let  ballSpeed;
-let gameBoard,ctx,scoreText;
+let gameBoard,ctx,scoreText,btn;
 let gameWidth,gameHeight;
 let player1Score,player2Score;
 let ballX,ballY;
@@ -21,6 +22,7 @@ function start(){
     ballSpeed = 10;
     gameBoard = document.getElementById("gameBoard");
     scoreText = document.getElementById("score");
+    document.getElementById("btn").textContent = "Restart";
     ctx = gameBoard.getContext('2d');
     gameWidth = gameBoard.width;
     gameHeight = gameBoard.height;
@@ -147,7 +149,12 @@ function updateScore(){
     scoreText.textContent = `${player1Score} : ${player2Score}`;
     console.log(`${player1Score} : ${player2Score}`);
 
-    running = (player1Score ==10 || player2Score == 10)? false : true;
+    running = (player1Score ==winScore || player2Score == winScore)? false : true;
+
+    if(!running){
+        let winColor = player1Score == winScore? paddle1Color : paddle2Color;
+        scoreText.textContent = `🎉${winColor} wins!`
+    }
 }
 function clearBoard(){
     ctx.fillStyle = "forestgreen";
